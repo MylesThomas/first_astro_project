@@ -96,16 +96,7 @@ def my_first_dag():
         # add more dots since we are going further back now.....
         # os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "../../key.json" #Service account key file path
         print(f"starting load() ...")
-        # os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = {
-        #     "account": "",
-        #     "client_id": "764086051850-6qr4p6gpi6hn506pt8ejuq83di341hur.apps.googleusercontent.com",
-        #     "client_secret": "d-FL95Q19q7MQmFpd7hHD0Ty",
-        #     "quota_project_id": "turnkey-timer-416503",
-        #     "refresh_token": "1//05XPT9pqf6KKpCgYIARAAGAUSNwF-L9IrcRCBZErHqRQoXb6ukmQf4_fyaicnxr67Nmpfwb2lpGFpr6dwi3Xereqwy6KHZOkdgaQ",
-        #     "type": "authorized_user",
-        #     "universe_domain": "googleapis.com"
-        #     }
-
+        
         # trying to figure out how file structure is once you deploy to Astro...
         SCRIPT_DIR = os.getcwd()
         print(f"script directory: {SCRIPT_DIR}")

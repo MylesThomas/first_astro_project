@@ -9,4 +9,5 @@ airflow-webserver.pid
 webserver_config.py
 airflow.cfg
 airflow.db
-key.json
+# manually adding for key.json
+include/key.json
