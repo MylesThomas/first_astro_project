@@ -11,3 +11,4 @@ airflow.cfg
 airflow.db
 # manually adding for key.json
 include/key.json
+key.json
