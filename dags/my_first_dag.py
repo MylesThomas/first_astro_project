@@ -55,7 +55,12 @@ def my_first_dag():
             start=start,
             end=end,
         )
+        data = data['Adj Close']
+        data.index = pd.to_datetime(data.index)
+        data.reset_index(inplace=True)
+
         print(f"data.columns: {data.columns}")
+        
         if 'Datetime' not in data.columns:
             raise Exception("There was an issue with the download from yfinance's API. Please try again.")
         
@@ -72,9 +77,6 @@ def my_first_dag():
         cleans it up.
         """
         print(f"starting transform() ...")
-        data = data['Adj Close']
-        data.index = pd.to_datetime(data.index)
-        data.reset_index(inplace=True)
         print(f"column names before melt/pivot: {data.columns}")
         data_melted = pd.melt(
             data,
