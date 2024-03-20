@@ -55,6 +55,9 @@ def my_first_dag():
             start=start,
             end=end,
         )
+        if 'Datetime' not in data.columns:
+            raise Exception("There was an issue with the download from yfinance's API. Please try again.")
+        
         print(f"finished extract().")
         return data
 
